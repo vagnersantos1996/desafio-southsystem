@@ -1,0 +1,87 @@
+.dragon-container {
+	width: 100%;
+	margin: 20px 0;
+	border-radius: 5px;
+	background-color: #242526;
+	color: rgb(228, 230, 235);
+}
+
+.dragon-container > div:first-child {
+	padding: 15px 20px;
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-shrink: 0
+}
+
+.dragon-container > div:first-child > div:first-child {
+	flex-grow: 1;
+}
+
+.dragon-container > div:first-child > div:nth-child(2) {
+	width: 35px;
+	height: 35px;
+}
+
+.dragon-container > div:first-child > div:nth-child(2) > img {
+	max-width: 100%;
+	transition: 0.3s;
+	border-radius: 50%;
+}
+
+.dragon-container > div:first-child > div:nth-child(2) > img:hover {
+	background: #3A3B3C;
+	cursor: pointer;
+}
+
+.dragon-container > div:first-child > div > h1 {
+	margin: 0;
+}
+
+.dragon-container > div.image {
+	text-align: center;
+	background-color: #161718;
+}
+
+.dragon-container > div.image > img {
+	max-width: 80%;
+	max-height: 400px;
+	background-color: #161718;
+}
+
+.dragon-container > div:last-child {
+	padding: 15px 20px;
+}
+
+.dragon-container > div:last-child > div {
+	margin-bottom: 10px;
+}
+
+.menu-dragon {
+	top: 100%;
+	right: 0;
+	position: absolute;
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px #242526;
+	background-color: #3A3B3C;
+	min-width: 150px;
+	overflow: hidden;
+}
+
+.menu-dragon .link-menu {
+	display: block;
+	padding: 15px 10px;
+	color: rgb(228, 230, 235);
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.menu-dragon .link-menu:hover {
+	background: #e4e6eb;
+	color: #161718;
+}
+
+.menu-dragon .link-menu:active {
+	background: #ababac;
+}
