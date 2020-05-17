@@ -38,9 +38,6 @@ export default class Dragon extends Component {
 		data_completa_arr[0] = data_arr.join('/');
 		data_completa_arr[1] = data_completa_arr[1].split('.')[0];
 
-		console.log(data_completa_arr[0]);
-		console.log(data_completa_arr[1]);
-
 		return (
 			<div className="dragon-container">
 				<div>
