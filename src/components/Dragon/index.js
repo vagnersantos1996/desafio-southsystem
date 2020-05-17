@@ -31,6 +31,16 @@ export default class Dragon extends Component {
 	};
 
 	render() {
+		let data_criacao = this.props.item.createdAt;
+		let data_completa_arr = data_criacao.split('T');
+		let data_arr = data_completa_arr[0].split('-');
+		data_arr = data_arr.reverse();
+		data_completa_arr[0] = data_arr.join('/');
+		data_completa_arr[1] = data_completa_arr[1].split('.')[0];
+
+		console.log(data_completa_arr[0]);
+		console.log(data_completa_arr[1]);
+
 		return (
 			<div className="dragon-container">
 				<div>
@@ -56,6 +66,7 @@ export default class Dragon extends Component {
 					{this.props.item.type && <div>Type: <strong>{this.props.item.type}</strong></div>}
 					{this.props.item.histories && <div>Histories: <strong>{this.props.item.histories}</strong></div>}
 					{this.props.item.history && <div>History: <strong>{this.props.item.history}</strong></div>}
+					{this.props.item.createdAt && <div>Criado em: <strong>{`${data_completa_arr[0]} - ${data_completa_arr[1]}`}</strong></div>}
 				</div>
 			</div>
 		)

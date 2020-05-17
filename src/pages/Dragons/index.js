@@ -22,8 +22,6 @@ class SignIn extends Component {
 	load = async () => {
 		const response = await api.get(`/dragon?orderby=name`);
 		await this.setState({list: response.data});
-
-		console.log(this.state.list);
 	}
 
 	componentDidMount() {
