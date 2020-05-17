@@ -3,6 +3,57 @@
 	max-width: 1000px;
 	margin: 0 auto;
 	height: 100%;
+	flex-wrap: wrap;
+}
+
+.action-buttons {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 15px 0;
+	height: auto;
+	max-height: 100px;
+}
+
+.action-button {
+	min-width: 300px;
+	margin-right: 20px;
+	border-radius: 5px;
+	border: 3px solid #242526;
+	padding: 15px;
+	line-height: 16px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.3s;
+	text-decoration: none;
+}
+
+.action-button:hover {
+	background-color: #242526;
+}
+
+.action-button > div > img {
+	max-height: 32px;
+	padding: 5px;
+	transform: rotate(45deg);
+	border-radius: 50%;
+	transition: 0.3s;
+}
+
+.action-button > div {
+	padding: 5px;
+	font-size: 1.2em;
+	color: #E4E6D8;
+}
+
+@media (max-width: 1000px) {
+	.action-buttons {
+		justify-content: center;
+	}
+
+	.action-button {
+		margin: 0 10px;
+	}
 }

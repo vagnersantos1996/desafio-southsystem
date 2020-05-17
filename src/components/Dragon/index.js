@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 
+import api from '../../services/api';
+
 import './style.css';
 import MenuImg from "../../assets/dot-menu.png";
 import notFoundImg from "../../assets/not-found.png";
 
-export default class Dispositivo extends Component {
+export default class Dragon extends Component {
 	state = {
 		dragonMenuActive: false
 	};
+
+	componentDidMount = () => {}
 
 	toggleMenu = () => {
 		this.setState((prevState) => ({
@@ -22,8 +26,8 @@ export default class Dispositivo extends Component {
 	};
 
 	deleteDragon = () => {
-		console.log("delete");
-		
+		api.delete(`/dragon/${this.props.item.id}`);
+		setTimeout(this.props.reload, 1000)
 	};
 
 	render() {
@@ -33,13 +37,18 @@ export default class Dispositivo extends Component {
 					<div>
 						<h1>{this.props.item.name}</h1>
 					</div>
-					<div>
-						<img src={MenuImg} alt="menu dragão" onClick={this.toggleMenu} onBlur={this.closeMenu} />
+					<div onBlur={this.closeMenu}>
+						<img src={MenuImg} alt="menu dragão" onClick={this.toggleMenu} />
 					</div>
 					{this.state.dragonMenuActive &&
 					<div className="menu-dragon">
 						<Link className="link-menu" to={`/dragon/${this.props.item.id}`}>Editar</Link>
-						<div className="link-menu" onClick={this.deleteDragon}>Excluir</div>
+						<div
+							className="link-menu"
+							onClick={() => {if(window.confirm('Deseja realmente excluir este dragão?')){this.deleteDragon()};}}
+						>
+							Excluir
+						</div>
 					</div>}
 				</div>
 				{<div className="image"><img src={this.props.item.imageUrl ?? notFoundImg} alt="Imagem dragão" title={this.props.item.name} /></div>}
