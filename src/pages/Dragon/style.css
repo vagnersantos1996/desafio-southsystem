@@ -1,0 +1,124 @@
+.dragonpage-container {
+	width: 100%;
+	max-width: 1000px;
+	margin: 20px auto;
+	border-radius: 5px;
+	background-color: #242526;
+	color: #e4e6eb;
+	position: relative;
+	display: table;
+	padding-bottom: 15px;
+}
+
+.close-dragon {
+	height: 64px;
+	padding: 7px 15px;
+	text-align: right
+}
+
+.close-dragon > img {
+	max-height: 50px;
+	cursor: pointer;
+	border-radius: 50%;
+	transition: 0.3s;
+	padding: 10px;
+}
+
+.close-dragon > img:hover {
+	background-color: #18191A;
+}
+
+.dragon-image {
+	padding: 15px 0;
+	text-align: center;
+}
+
+.dragonpage-container > div {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.dragon-image > img {
+	max-height: 350px;
+	max-width: 350px;
+	margin: 0 auto;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 3px #18191A;
+}
+
+.dragon-info {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.dragon-info > div {
+	padding: 15px;
+}
+
+.dragon-info > div:nth-child(odd) {
+	min-width: 150px;
+	width: auto;
+	text-align: right;
+	font-size: 1.2em;
+}
+
+.dragon-info > div:nth-child(even) {
+	width: 80%;
+	max-width: calc(100% - 200px);
+}
+
+.dragon-info > div > input {
+	min-width: 300px;
+	width: 70%;
+	padding: 5px 3px;
+	border: none;
+	border-bottom: 5px solid #666;
+	transition: 0.3s;
+}
+
+.dragon-info > div > input:hover {
+	border-color: #333;
+}
+
+.dragon-info > div > input:active,
+.dragon-info > div > input:focus {
+	border-color: #BA2C2E;
+}
+
+.dragonpage-container > form > div:last-child {
+	width: 100%;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.dragonpage-container > form > div:last-child > input {
+	min-width: 200px;
+	border: none;
+	padding: 10px 0;
+	font-size: 1.2em;
+	background-color: #e4e6eb;
+	color: #18191A;
+	cursor: pointer;
+	border-radius: 3px;
+	transition: 0.3s;
+}
+
+.dragonpage-container > form > div:last-child > input:hover {
+	background-color: #18191A;
+	color: #e4e6eb;
+}
+
+@media (max-width: 1000px) {
+	.dragon-info > div:nth-child(odd) {
+		width: 100%;
+		text-align: left;
+		padding: 0 10%;
+	}
+	
+	.dragon-info > div:nth-child(even) {
+		width: 100%;
+		max-width: 100%;
+		padding: 0 10%;
+	}
+}
